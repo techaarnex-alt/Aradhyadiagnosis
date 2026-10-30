@@ -1,8 +1,8 @@
-// Keep Billing immediately below Reports in the completed workflow sidebar.
+// Keep Billing immediately below Patients in the completed workflow sidebar.
 const navigation = document.querySelector('.nav')
-const reportsButton = navigation?.querySelector('[data-nav="reports"]')
+const patientsButton = navigation?.querySelector('[data-nav="patients"]')
 const billingButton = navigation?.querySelector('[data-nav="billing"]')
 
-if (reportsButton && billingButton) {
-  reportsButton.insertAdjacentElement('afterend', billingButton)
+if (patientsButton && billingButton) {
+  patientsButton.insertAdjacentElement('afterend', billingButton)
 }
