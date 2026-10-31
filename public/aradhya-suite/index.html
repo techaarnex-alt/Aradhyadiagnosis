@@ -1097,6 +1097,23 @@
       .rk-page.active[data-rk-page="business"] .rk-table td { padding: 2.2mm !important; white-space: normal !important; overflow-wrap: anywhere; }
     }
   </style>
+  <style>
+    /*
+      A fixed positioned element is painted once per printed page by Chromium.
+      Keep the report watermark fixed while printing so long reports receive a
+      full, correctly sized mark on every page instead of one mark across the
+      entire fragmented report container.
+    */
+    @media print {
+      .rk-report-paper.rk-supplied::before {
+        position: fixed;
+        inset: 0;
+        background-position: center;
+        background-size: 235px;
+        background-repeat: no-repeat;
+      }
+    }
+  </style>
   <script src="nav-order.js"></script>
 </body>
 </html>
