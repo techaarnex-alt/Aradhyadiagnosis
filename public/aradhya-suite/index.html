@@ -1349,7 +1349,8 @@
       entire fragmented report container.
     */
     @media print {
-      .rk-report-paper.rk-supplied::before {
+      .rk-report-paper.rk-supplied::before,
+      .rk-invoice::before {
         position: fixed;
         inset: 0;
         background-position: center;
@@ -1360,7 +1361,8 @@
   </style>
   <style>
     /* Match the screen preview to the compact, centred watermark used in print. */
-    .rk-report-paper.rk-supplied::before {
+    .rk-report-paper.rk-supplied::before,
+    .rk-invoice::before {
       inset: 0;
       background-position: center;
       background-size: 235px;
